@@ -88,6 +88,9 @@ async function fetch_coordinates(coordinates){
 
         let data = await respose.json();
 
+        if(data?.cod === "404"){
+            throw new Error;
+        }
         
         loading_page.classList.remove("active");
         weatherDescTab.classList.add("active");
@@ -188,6 +191,10 @@ async function getCityWeather_data(city){
         const respose = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
 
         const data = await respose.json();
+
+        if(data?.cod === "404"){
+            throw new Error;
+        }
         
         loading_page.classList.remove("active");
         weatherDescTab.classList.add("active");
