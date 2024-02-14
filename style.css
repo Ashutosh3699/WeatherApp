@@ -1,0 +1,11 @@
+.current_tab{
+
+    background-color: aqua;
+    border-radius: 3px;
+}
+
+.active{
+
+    scale: 1;
+    opacity: 1;
+}
