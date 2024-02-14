@@ -17,9 +17,9 @@
 
         <div class="button_tab">
 
-            <div class="userWeather_btn" userWeather>Your Weather</div>
+            <div class="userWeather_btn tab" userWeather>Your Weather</div>
 
-            <div class="searchWeather_btn" searchWeather>Search Weather</div>
+            <div class="searchWeather_btn tab" searchWeather>Search Weather</div>
         </div>
 
         <!-- weather container for switching the tabs -->
@@ -27,7 +27,7 @@
 
             <!-- grantAccess page -->
 
-            <div class="grantAccess_page" grantAccess>
+            <div class="grantAccess_page sub_conatiner" grantAccess>
 
                 <img src="./assets/location.png" width="80px" height="80px" loading="lazy">
 
@@ -36,7 +36,7 @@
 
                 <p>Allow Access To Get Weather Information</p>
 
-                <button class="btn" data_grantAccess>Grant Access</button>
+                <button class="btn grant_btn" data_grantAccess>Grant Access</button>
 
 
             </div>
@@ -44,7 +44,7 @@
             <!-- search tab -->
             <form class="searchTab_page" searchTab>
 
-                <input type="text" class="search_tab_input" search_input_form>
+                <input type="text" placeholder="Search city here..." class="search_tab_input" search_input_form >
 
                 <button class="btn" type="submit">
                     <img src="./assets/search.png" width="20px" height="20px" loading="lazy">
@@ -53,7 +53,7 @@
 
             <!-- weather description tab -->
 
-            <div class="weatherDescTab" weatherDescTab_page>
+            <div class="weatherDescTab sub_conatiner" weatherDescTab_page>
 
                 <div class="cityName_tab">
 
@@ -70,7 +70,7 @@
 
                 <div class="weather_info_box">
 
-                    <div class="windSpeed_det">
+                    <div class="windSpeed_det parameter">
 
                         <img src="./assets/wind.png" >
 
@@ -79,7 +79,7 @@
                         <p class="WindSpeed_data"></p>
                     </div>
 
-                    <div class="Humidity_det">
+                    <div class="Humidity_det parameter">
 
                         <img src="./assets/humidity.png" >
 
@@ -88,7 +88,7 @@
                         <p class="Humidity_data"></p>
                     </div>
 
-                    <div class="cloud_det">
+                    <div class="cloud_det parameter">
 
                         <img src="./assets/cloud.png" >
 
@@ -105,12 +105,14 @@
 
             </div>
 
-            <div class="loader" loading_tab>
+            <div class="loader sub_conatiner" loading_tab>
 
                 <img src="./assets/loading.gif" width="150px" height="150px" loading="lazy">
+
+                <p>Loading....</p>
             </div>
 
-            <div class="error_404" error_page>
+            <div class="error_404 sub_conatiner" error_page>
 
                 <img src="./assets/not-found.png" width="500px" height="500px" loading="lazy">
 

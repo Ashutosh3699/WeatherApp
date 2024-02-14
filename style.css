@@ -1,11 +1,274 @@
-.current_tab{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-    background-color: aqua;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.wrapper{
+
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: linear-gradient(143deg, rgba(48, 75, 110, 1) 0%, rgba(0, 127, 212, 1) 100%, rgba(45, 54, 137, 1) 100%);
+    color: aliceblue;
+}
+
+.header{
+
+    text-align: center;
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    user-select: none;
+}
+
+.button_tab{
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.75rem;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.tab{
+
+    padding: 3px 8px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tab.current_tab{
+
+    background-color: rgb(121, 140, 177);
     border-radius: 3px;
 }
 
-.active{
+.weather_Container{
 
-    scale: 1;
-    opacity: 1;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    margin-block: 4rem;
 }
+
+.btn{
+
+    all: unset;
+    border-radius: 5px;
+    padding: 5px 1.75rem;
+    background-color: #3F72AF;
+    box-shadow: 0px 2px 3px rgb(22, 56, 95);
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.sub_conatiner{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem; 
+}
+
+.grantAccess_page{
+
+    display: none;
+}
+
+.grantAccess_page.active{
+ 
+    display: flex;
+
+} 
+
+    
+.grantAccess_page h2{
+
+    font-size: 1.75rem;
+    margin-top: 1.25rem;
+    font-weight: 700;
+    /* line-height: 1rem; */
+}
+
+.loader{
+
+    display: none;
+}
+
+.loader.active{
+
+    display: flex;
+}
+.loader p{
+
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.weatherDescTab{
+
+    display: none;
+    gap: 0rem;
+}
+
+.weatherDescTab.active{
+
+    display: flex;
+}
+
+.weatherDescTab img{
+
+    width: 90px;
+    object-fit: contain;
+}
+
+.cityName_tab{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+}
+
+.cityName_tab p{
+
+    font-size: 2.15rem;
+    font-weight: 600;
+
+}
+
+.cityName_tab img{
+
+    width: 30px;
+    height: 25px;
+}
+
+.weather_type{
+
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.city_temp{
+
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.weather_info_box{
+
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 1rem;
+
+}
+
+.parameter{
+
+    width: 30%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #87A0C2;
+    padding: 1rem;
+    gap: 5px 0;
+}
+
+.parameter img{
+
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.parameter p:first-of-type{
+
+    font-size: 1.75rem;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type{
+
+    font-size: 1.5rem;
+}
+
+.error_404{
+
+    display: none;
+}
+
+.error_404.active{
+
+    display: flex;
+}
+
+.searchTab_page{
+
+    display: none;
+
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 0 0.5rem;
+}
+
+.searchTab_page.active{
+
+    display: flex;
+}
+
+.search_tab_input{
+
+    all:unset;
+    width: calc(100% - 80px);
+    height: 2.75rem;
+    background-color: #8197B5;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.search_tab_input:focus{
+
+    outline: 3px solid aliceblue;
+}
+
+.search_tab_input::placeholder{
+
+    color: aliceblue;
+}
+
+.searchTab_page .btn{
+
+    margin: 0;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+

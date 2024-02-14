@@ -120,10 +120,10 @@ function render_weather_info(data){
 
     weathertype.innerText = data?.weather?.[0]?.description;
     weather_type_icon.src = `http://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`
-    temperature.innerText = data?.main?.temp;
-    windspeed_data.innerText = data?.wind?.speed;
-    humidity_data.innerText = data?.main?.humidity;
-    cloud_data.innerText = data?.clouds?.all;
+    temperature.innerText = `${data?.main?.temp} °C`;
+    windspeed_data.innerText = `${data?.wind?.speed} m/s`;
+    humidity_data.innerText = `${data?.main?.humidity} %`;
+    cloud_data.innerText = `${data?.clouds?.all} %`;
 
 }
 
@@ -180,6 +180,7 @@ async function getCityWeather_data(city){
     // error_tab.classList.remove("active");
     loading_page.classList.add("active");
     grant_access_tab.classList.remove("active");
+    error_tab.classList.remove("active");
     weatherDescTab.classList.remove("active");
 
     try {
