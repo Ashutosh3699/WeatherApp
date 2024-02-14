@@ -269,6 +269,34 @@
     border-radius: 50%;
 }
 
+@media (max-width: 650px) {
+    
+    .city_temp{
+
+        font-size: 2.5rem;
+    }
+    .weather_info_box{
+
+        flex-direction: column;
+        width: 90%;
+    }
+    .parameter{
+
+        width: 90%;
+    }
+}
+
+@media (max-width: 350px){
+
+    .header{
+
+        font-size: 1rem;
+    }
+    .tab{
+        font-size: 0.8rem;
+    }
+
+}
 
 
 
